@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Nav from "./components/Navbar";
 import friends from "./friends.json";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    friends
+    friends,
+    highScore: 0,
+    currentScore: 0,
+    status: "",
+    clicked: []
   };
 
   removeFriend = id => {
@@ -17,10 +22,30 @@ class App extends Component {
     this.setState({ friends });
   };
 
+  handleIncrement = () => {
+    const scoreNow = this.state.currentScore + 1;
+    this.setState({
+      currentScore: scoreNow,
+      status: ""
+    });
+    if (scoreNow >= this.state.highScore) {
+      this.setState({highScore: scoreNow});
+    } else if (scoreNow === 12) {
+      this.setState({status: ""})
+    }
+    this.handleShuffle();
+  };
+
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
+        <Nav 
+        gameName = {}
+        instructions = {}
+        currentScore = {}
+        highScore = {}
+        />
         <Title>Clicky Game</Title>
         {this.state.friends.map(friend => (
           <FriendCard
