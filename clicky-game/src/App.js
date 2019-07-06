@@ -45,6 +45,10 @@ class App extends Component {
   //if the id's are not equal, then call our increment method
   //else the game restarts
 
+  //need reset method....
+  //reinitialize the game setstate{}......
+
+  
   //
 
   // Map over this.state.friends and render a FriendCard component for each friend object
