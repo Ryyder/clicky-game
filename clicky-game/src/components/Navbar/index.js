@@ -8,6 +8,9 @@ const Nav = props => {
         <li className="nav-item active">
           <a href="/">{props.title}</a>
         </li>
+        <li>
+          {props.status}
+        </li>
       </ul>
       <span className="navbar-text">
         {props.currentScore} | {props.topScore}
