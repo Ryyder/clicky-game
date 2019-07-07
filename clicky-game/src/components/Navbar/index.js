@@ -11,10 +11,13 @@ const Nav = props => {
         <li>
           {props.status}
         </li>
+        <li>
+          Current Score: {props.score}
+        </li>
+        <li>
+          Top Score: {props.topScore}
+        </li>
       </ul>
-      <span className="navbar-text">
-        {props.currentScore} | {props.topScore}
-      </span>
     </nav>
   );
 }

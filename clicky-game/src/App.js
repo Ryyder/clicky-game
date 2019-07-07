@@ -43,7 +43,7 @@ class App extends Component {
     if (scoreNow >= this.state.highScore) {
       this.setState({highScore: scoreNow});
     } else if (scoreNow === 12) {
-      this.setState({status: "All 12 matched!!!"});
+      this.setState({status: "All 12 matched!!! You Win!!!"});
     }
     this.handleShuffle();
   };
@@ -72,14 +72,11 @@ class App extends Component {
     this.setState({
         currentScore: 0,
         highScore: this.state.highScore,
-        status: "Let's Go!",
+        status: "New Game!",
         clicked: []
       });
       this.handleShuffle();
   };
-
-  
-  //
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
@@ -87,8 +84,8 @@ class App extends Component {
       <Wrapper>
         <Nav 
         title = "Naruto Click Game"
+        score = {this.state.currentScore}
         topScore = {this.state.topScore}
-        currentScore = {this.state.scoreNow}
         status = {this.state.status}
         />
         <Title>Click on a Character! If you don't click on any duplicates twice in a row, your score goes up 1 point. Try to see how high you can score.</Title>
