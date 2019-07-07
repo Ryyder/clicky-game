@@ -5,6 +5,14 @@ import Title from "./components/Title";
 import Nav from "./components/Navbar";
 import friends from "./friends.json";
 
+const Shuffle = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
@@ -40,13 +48,35 @@ class App extends Component {
     this.handleShuffle();
   };
 
-  //need method to randomly shuffle cards.....
   //onclick, this should take in the id of the card.
   //if the id's are not equal, then call our increment method
   //else the game restarts
+  handleClick = id => {
+    if (this.state.clicked.indexOf(id) === -1) {
+      this.handleIncrement();
+      this.setState({clicked: this.state.clicked.concat(id)});
+    } else {
+      this.handleReset();
+    }
+  };
+
+  //need method to randomly shuffle cards.....
+  handleShuffle = () => {
+    let mixedFriends = Shuffle(friends);
+    this.setState({friends: mixedFriends});
+  };  
 
   //need reset method....
   //reinitialize the game setstate{}......
+  handleReset = () => {
+    this.setState({
+        currentScore: 0,
+        highScore: this.state.highScore,
+        status: "Let's Go!",
+        clicked: []
+      });
+      this.handleShuffle();
+  };
 
   
   //
@@ -61,16 +91,16 @@ class App extends Component {
         currentScore = {this.state.scoreNow}
         status = {this.state.status}
         />
-        <Title>Clicky Game</Title>
+        <Title>Click on a Character! If you don't click on any duplicates twice in a row, your score goes up 1 point. Try to see how high you can score.</Title>
         {this.state.friends.map(friend => (
           <FriendCard
-            removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
-            name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
+            handleIncrement={this.handleIncrement}
+            handleClick={this.handleClick}
+            handleReset={this.handleReset}
+            handleShuffle={this.handleShuffle}
           />
         ))}
       </Wrapper>

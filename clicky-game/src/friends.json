@@ -1,86 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Naruto",
-    "image": "https://i.pinimg.com/originals/fe/f7/09/fef709eadcf599bfcf01006edff31717.jpg",
-    "occupation": "Fry Cook",
-    "location": "A Pineapple Under the Sea"
+    "image": "https://i.pinimg.com/originals/fe/f7/09/fef709eadcf599bfcf01006edff31717.jpg"
   },
   {
     "id": 2,
-    "name": "Sasuke",
-    "image": "https://www.pngkey.com/png/detail/5-56665_uchiha-sasuke-png-photo-sasuke-uchiha-the-last.png",
-    "occupation": "Restaurant Owner",
-    "location": "A Giant Anchor"
+    "image": "https://www.pngkey.com/png/detail/5-56665_uchiha-sasuke-png-photo-sasuke-uchiha-the-last.png"
   },
   {
     "id": 3,
-    "name": "Kakashi",
-    "image": "https://imgix.ranker.com/user_node_img/50085/1001683056/original/kakashi-and-_39_s-mother-could-be-from-kirigakure-or-she-could-be-an-inuzuka-photo-u1?w=650&q=50&fm=pjpg&fit=crop&crop=faces",
-    "occupation": "Cashier",
-    "location": "An Easter Island Head"
+    "image": "https://imgix.ranker.com/user_node_img/50085/1001683056/original/kakashi-and-_39_s-mother-could-be-from-kirigakure-or-she-could-be-an-inuzuka-photo-u1?w=650&q=50&fm=pjpg&fit=crop&crop=faces"
   },
   {
     "id": 4,
-    "name": "Sakura",
-    "image": "https://static.comicvine.com/uploads/scale_super/11124/111247188/5038047-sakura_haruno_by_s_i_m_c_a-d8pfdxw.jpg",
-    "occupation": "Boy Genius",
-    "location": "A Secret Laboratory"
+    "image": "https://static.comicvine.com/uploads/scale_super/11124/111247188/5038047-sakura_haruno_by_s_i_m_c_a-d8pfdxw.jpg"
   },
   {
     "id": 5,
-    "name": "Hashirama",
-    "image": "https://vignette.wikia.nocookie.net/naruto-shippuden-ultimate-ninja-blazing/images/d/db/Portrait-0746.png/revision/latest?cb=20190115035518",
-    "occupation": "A Cowardly Dog",
-    "location": "Nowhere, Kansas"
+    "image": "https://vignette.wikia.nocookie.net/naruto-shippuden-ultimate-ninja-blazing/images/d/db/Portrait-0746.png/revision/latest?cb=20190115035518"
   },
   {
     "id": 6,
-    "name": "Madara",
-    "image": "https://vignette.wikia.nocookie.net/tmnt-x-pokemon/images/e/eb/Madara_Uchiha.jpg/revision/latest?cb=20171230034019",
-    "occupation": "Student",
-    "location": "Bluffington"
+    "image": "https://vignette.wikia.nocookie.net/tmnt-x-pokemon/images/e/eb/Madara_Uchiha.jpg/revision/latest?cb=20171230034019"
   },
   {
     "id": 7,
-    "name": "Itachi",
-    "image": "https://image.winudf.com/v2/image/Y29tLmFuZHJvbW8uZGV2NjYwNjE0LmFwcDcwNjI4NF9zY3JlZW5fMF8xNTEyMjQyOTc4XzA2Mw/screen-0.jpg?fakeurl=1&type=.jpg",
-    "occupation": "Looney Toon",
-    "location": "A Rabbit Burrow"
+    "image": "https://image.winudf.com/v2/image/Y29tLmFuZHJvbW8uZGV2NjYwNjE0LmFwcDcwNjI4NF9zY3JlZW5fMF8xNTEyMjQyOTc4XzA2Mw/screen-0.jpg?fakeurl=1&type=.jpg"
   },
   {
     "id": 8,
-    "name": "Kaguya",
-    "image": "https://i.pinimg.com/originals/39/64/39/3964394a26ae41c3b2b4b1df1c2d322b.png",
-    "occupation": "Ladies Man",
-    "location": "Aron City"
+    "image": "https://i.pinimg.com/originals/39/64/39/3964394a26ae41c3b2b4b1df1c2d322b.png"
   },
   {
     "id": 9,
-    "name": "Minato",
-    "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2a6bf3c3-ed4e-4d52-85b6-2692a3b8eeac/dbpegvv-fdcd6bb0-1ed8-4e2c-beff-9dcd433c42bb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJhNmJmM2MzLWVkNGUtNGQ1Mi04NWI2LTI2OTJhM2I4ZWVhY1wvZGJwZWd2di1mZGNkNmJiMC0xZWQ4LTRlMmMtYmVmZi05ZGNkNDMzYzQyYmIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oCLRG11lcRrjML8fZmqH9EjJHHVyA2e8dl8JutoftCA",
-    "occupation": "Adventurer",
-    "location": "California"
+    "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2a6bf3c3-ed4e-4d52-85b6-2692a3b8eeac/dbpegvv-fdcd6bb0-1ed8-4e2c-beff-9dcd433c42bb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJhNmJmM2MzLWVkNGUtNGQ1Mi04NWI2LTI2OTJhM2I4ZWVhY1wvZGJwZWd2di1mZGNkNmJiMC0xZWQ4LTRlMmMtYmVmZi05ZGNkNDMzYzQyYmIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.oCLRG11lcRrjML8fZmqH9EjJHHVyA2e8dl8JutoftCA"
   },
   {
     "id": 10,
-    "name": "Pain",
-    "image": "https://www.desktopbackground.org/download/720x1280/2014/02/20/719907_hd-naruto-pain-wallpapers-and-photos_3508x2552_h.jpg",
-    "occupation": "Cashier",
-    "location": "O-Town, California"
+    "image": "https://www.desktopbackground.org/download/720x1280/2014/02/20/719907_hd-naruto-pain-wallpapers-and-photos_3508x2552_h.jpg"
   },
   {
     "id": 11,
-    "name": "Hinata",
-    "image": "https://data.whicdn.com/images/300945672/large.jpg?t=1510016677",
-    "occupation": "Superhero",
-    "location": "Earth"
+    "image": "https://data.whicdn.com/images/300945672/large.jpg?t=1510016677"
   },
   {
     "id": 12,
-    "name": "Tsunade",
-    "image": "http://pm1.narvii.com/7014/f6d5e16944e7d33f1c1268df0095ebe4ee38a73dr1-564-808v2_uhq.jpg",
-    "occupation": "Ahhhh! A Real Monster!",
-    "location": "Under a City Dump"
+    "image": "http://pm1.narvii.com/7014/f6d5e16944e7d33f1c1268df0095ebe4ee38a73dr1-564-808v2_uhq.jpg"
   }
 ]
