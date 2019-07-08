@@ -5,18 +5,6 @@ import Title from "./components/Title";
 import Nav from "./components/Navbar";
 import friends from "./friends.json";
 
-//function that shuffle our cards
-const Shuffle = (arr) => {
-  //loop through our array...
-  for (let i = 0; i < arr.length; i++) {
-    //randomly select a card
-    let j = Math.floor(Math.random() * (i + 1));
-    //swap the values
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  //return our array
-  return arr;
-}
 
 class App extends Component {
   // Setting this.state.friends to the friends json array, highscore, currentscore, status, and clicked array
@@ -28,12 +16,25 @@ class App extends Component {
     clicked: []
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
-    this.setState({ friends });
-  };
+  handleShuffle = () => {
+    console.log("Shuffling cards");
+    let copy = [...this.state.friends]
+    copy.sort(() => Math.random() - 0.5);
+    this.setState({friends: copy});
+  }
+
+  renderCards = () => {
+    return this.state.friends.map(friend => (
+      <FriendCard
+        id={friend.id}
+        key={friend.id}
+        image={friend.image}
+        handleIncrement={this.handleIncrement}
+        handleClick={this.handleClick}
+        handleReset={this.handleReset}
+      />
+    ))
+  }
 
   //handleIncrememnt method handles
   handleIncrement = () => {
@@ -50,7 +51,6 @@ class App extends Component {
     } else if (scoreNow === 12) {
       this.setState({status: "All 12 matched!!! You Win!!!"});
     }
-    this.handleShuffle();
   };
 
   //onclick, this should take in the id of the card.
@@ -63,18 +63,13 @@ class App extends Component {
       this.handleIncrement();
       //add the id to the clicked array in our state object
       this.setState({clicked: this.state.clicked.concat(id)});
+      this.handleShuffle();
     } 
     //if same id clicked twice, we reset the game board
     else { 
       this.handleReset();
     }
   };
-
-  //need method to randomly shuffle cards.....
-  handleShuffle = () => {
-    let mixedFriends = Shuffle(friends);
-    this.setState({friends: mixedFriends});
-  };  
 
   //need reset method....
   //reinitialize the game setstate{}......
@@ -85,7 +80,7 @@ class App extends Component {
         status: "New Game!",
         clicked: []
       });
-      this.handleShuffle();
+    this.handleShuffle();
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
@@ -99,17 +94,7 @@ class App extends Component {
         status = {this.state.status}
         />
         <Title>Click on a Character! If you don't click on any duplicates twice in a row, your score goes up 1 point. Try to see how high you can score.</Title>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
-            handleIncrement={this.handleIncrement}
-            handleClick={this.handleClick}
-            handleReset={this.handleReset}
-            handleShuffle={this.handleShuffle}
-          />
-        ))}
+        {this.renderCards()}
       </Wrapper>
     );
   }
