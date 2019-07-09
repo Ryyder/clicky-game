@@ -16,14 +16,20 @@ class App extends Component {
     clicked: []
   };
 
+  //our shuffle method...
   handleShuffle = () => {
     console.log("Shuffling cards");
+    //use spread operator to no mutate original state data
     let copy = [...this.state.friends]
+    //apply our shuffe to the copied object
     copy.sort(() => Math.random() - 0.5);
+    //setState to the copy object
     this.setState({friends: copy});
   }
 
+  //method to handle rendering our cards
   renderCards = () => {
+    //map over the friends object and put this data in our friendcar
     return this.state.friends.map(friend => (
       <FriendCard
         id={friend.id}
