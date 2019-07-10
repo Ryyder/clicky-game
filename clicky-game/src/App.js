@@ -24,7 +24,7 @@ class App extends Component {
     //apply our shuffe to the copied object
     copy.sort(() => Math.random() - 0.5);
     //setState to the copy object
-    this.setState({friends: copy});
+    this.setState({ friends: copy });
   }
 
   //method to handle rendering our cards
@@ -53,9 +53,9 @@ class App extends Component {
     });
     //if scoreNow is >= highScore, then set the high score to the scoreNow value
     if (scoreNow >= this.state.highScore) {
-      this.setState({highScore: scoreNow});
+      this.setState({ highScore: scoreNow });
     } else if (scoreNow === 12) {
-      this.setState({status: "All 12 matched!!! You Win!!!"});
+      this.setState({ status: "All 12 matched!!! You Win!!!" });
     }
   };
 
@@ -68,11 +68,11 @@ class App extends Component {
       //increment our score
       this.handleIncrement();
       //add the id to the clicked array in our state object
-      this.setState({clicked: this.state.clicked.concat(id)});
+      this.setState({ clicked: this.state.clicked.concat(id) });
       this.handleShuffle();
-    } 
+    }
     //if same id clicked twice, we reset the game board
-    else { 
+    else {
       this.handleReset();
     }
   };
@@ -81,23 +81,23 @@ class App extends Component {
   //reinitialize the game setstate{}......
   handleReset = () => {
     this.setState({
-        currentScore: 0,
-        highScore: this.state.highScore,
-        status: "New Game!",
-        clicked: []
-      });
+      currentScore: 0,
+      highScore: this.state.highScore,
+      status: "New Game!",
+      clicked: []
+    });
     this.handleShuffle();
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  //our render. inside our wrapper, call our nav component, title component, and rendercard method
   render() {
     return (
       <Wrapper>
-        <Nav 
-        title = "Naruto Click Game"
-        score = {this.state.currentScore}
-        topScore = {this.state.highScore}
-        status = {this.state.status}
+        <Nav
+          title="Naruto Click Game"
+          score={this.state.currentScore}
+          topScore={this.state.highScore}
+          status={this.state.status}
         />
         <Title>Click on a Character! If you don't click on any duplicates twice in a row, your score goes up 1 point. Try to see how high you can score.</Title>
         {this.renderCards()}
